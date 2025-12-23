@@ -1,0 +1,495 @@
+﻿/* ============================================
+   СБРОС СТИЛЕЙ И БАЗОВЫЕ НАСТРОЙКИ (ОСНОВНОЕ)
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #000000; /* Основной цвет текста как на Tilda */
+    background-color: #eeedea; /* ОСНОВНОЙ ФОН САЙТА Tilda */
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   ШАПКА САЙТА (HEADER)
+   ============================================ */
+.site-header {
+    background-color: transparent; /* Прозрачный фон, как на Tilda */
+    padding: 25px 0;
+    border-bottom: none; /* Убираем линию, если была */
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.main-nav {
+    display: flex;
+    gap: 35px; /* Больше расстояния между пунктами меню */
+}
+
+.main-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: #082ffa; /* Синий цвет при наведении */
+}
+
+/* СТИЛЬ КНОПКИ "ЛИЧНЫЙ КАБИНЕТ" как на Tilda */
+.btn-lk {
+    background-color: #082ffaba; /* Синий с прозрачностью 73% */
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-lk:hover {
+    background-color: #082ffa; /* Более насыщенный синий при наведении */
+}
+
+/* ============================================
+   ГЛАВНЫЙ ЭКРАН (HERO)
+   ============================================ */
+.hero {
+    padding: 150px 0; /* Большие отступы сверху и снизу */
+    text-align: left; /* Текст слева, как на Tilda */
+    background-color: #eeedea; /* ФОН секции */
+}
+
+.hero h1 {
+    font-size: 3.2em; /* Крупный заголовок */
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    max-width: 700px;
+    color: #000000;
+}
+
+.hero .tagline {
+    font-size: 1.2em;
+    margin-bottom: 45px;
+    max-width: 650px;
+    color: #000000;
+    opacity: 0.9;
+}
+
+/* ОСНОВНАЯ КНОПКА (как на Tilda) */
+.btn-primary {
+    background-color: #082ffaba; /* Синий с прозрачностью */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 38px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    display: inline-block;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #082ffa;
+}
+
+/* ============================================
+   ОСНОВНОЕ СОДЕРЖИМОЕ (MAIN CONTENT)
+   ============================================ */
+.main-content {
+    padding: 100px 0; /* Большие вертикальные отступы между секциями */
+}
+
+section {
+    margin-bottom: 140px; /* Большой отступ между секциями, как на Tilda */
+}
+
+/* Заголовки секций */
+section h2 {
+    font-size: 2.1em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+section h2 i {
+    color: #082ffa;
+}
+
+.intro-text {
+    font-size: 1.3em;
+    color: #000000;
+    margin-bottom: 60px;
+    max-width: 750px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* ============================================
+   СПИСОК ОСНОВНЫХ ФУНКЦИЙ (как на Tilda)
+   ============================================ */
+.tilda-functions {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 800px;
+    margin-top: 50px;
+align-items: center;
+}
+
+.func-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+/* Место для иконок (нужно добавить свои SVG или изображения) */
+.func-item::before {
+    content: '';
+    background-image: url('https://static.tildacdn.ink/tild3763-6461-4836-b261-353035633734/1.svg'); /* Пример, замените на свои */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.func-item:nth-child(2)::before {
+    background-image: url('https://static.tildacdn.ink/tild6630-3033-4237-a564-646431313432/2.svg');
+}
+
+.func-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.func-desc {
+    color: #000000;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* ============================================
+   FAQ (АККОРДЕОН)
+   ============================================ */
+.faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 25px 5px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: #082ffa;
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s;
+}
+
+.faq-answer.active {
+    padding: 0 5px 25px 5px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: #000000;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* ============================================
+   БЛОГ ДЛЯ УЧИТЕЛЕЙ
+   ============================================ */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.blog-post {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.blog-post p {
+    color: #000000;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.read-more {
+    color: #082ffa;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   ПОДВАЛ (FOOTER)
+   ============================================ */
+.site-footer {
+    background-color: #eeedea;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.site-footer p {
+    color: #000000;
+    opacity: 0.7;
+    font-size: 0.95em;
+}
+
+/* ============================================
+   АДАПТИВНОСТЬ (МОБИЛЬНЫЕ УСТРОЙСТВА)
+   ============================================ */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .tilda-functions {
+        gap: 25px;
+    }
+
+    .func-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        margin-bottom: 80px;
+    }
+}
+/* Центровка всей секции "Основные функции" и текста внутри */
+#functions {
+    text-align: center; /* 1. Центрирует заголовок, подзаголовок и вложенные блоки */
+}
+
+/* Центровка контента внутри каждой карточки функции */
+.tilda-functions .func-item {
+    text-align: center; /* 2. Центрирует текст (заголовок и описание) внутри карточки */
+    align-items: center; /* 3. Центрирует иконку и текст по вертикали */
+}
+
+/* Дополнительно: убираем лишние отступы слева у иконок */
+.func-item::before {
+    margin-left: 0;
+}
+/* 1. Убираем выравнивание заголовков по левому краю */
+section h2 {
+    justify-content: center; /* Центрируем заголовок с иконкой */
+}
+
+/* 2. Уточняем центровку всей секции функций */
+#functions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 3. Меняем направление flex для карточек на строку и центрируем */
+.tilda-functions .func-item {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left; /* Текст внутри карточки остается слева, как на Tilda */
+    gap: 20px;
+    max-width: 600px;
+}
+
+/* 4. Центрируем сам список функций */
+.tilda-functions {
+    align-items: center;
+}
+
+/* 5. Центрируем вступительный текст под заголовком */
+.intro-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 1. Исправляем отступы между элементами функций */
+.tilda-functions .func-item {
+    margin-bottom: 30px; /* Регулируйте это значение по ощущениям */
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Легкая разделительная линия как на Tilda */
+}
+.tilda-functions .func-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+/* 2. Точное выравнивание иконки и текста */
+.func-item::before {
+    margin-top: 5px; /* Чтобы иконка была на одной линии с первой строкой текста */
+}
+
+/* 3. Стандартные отступы заголовков секций как на Tilda */
+section {
+    margin-bottom: 135px; /* Именно такое значение часто используется */
+}
+/* Стили для нового макета главного экрана */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px; /* Расстояние между текстом и картинкой */
+    flex-wrap: wrap; /* На мобильных элементам будет удобно переноситься */
+}
+
+.hero-text {
+    flex: 1; /* Занимает доступное пространство */
+    min-width: 300px;
+}
+
+.hero-image {
+    flex: 1; /* Занимает столько же места, сколько и текст */
+    min-width: 300px;
+    text-align: center; /* Центрируем картинку в своем блоке */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px; /* Скругление углов как на Tilda */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+}
+
+/* Новые стили для подзаголовка и кнопок */
+.hero-subtitle {
+    font-size: 1.1em;
+    color: #000000;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 3.2em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.hero-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #000000;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #082ffaba;
+    border: 2px solid #082ffaba;
+    padding: 16px 38px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(8, 47, 250, 0.05);
+}
